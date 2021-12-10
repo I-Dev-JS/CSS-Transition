@@ -49,7 +49,7 @@ body
 .toggle.active span:nth-child(1)
 {
 	width: 40px;
-	transform: translateX(0px)rotate(45deg);
+	transform: translateX(0px)rotate(225deg);
 }
 
 
@@ -65,7 +65,7 @@ body
 .toggle.active span:nth-child(2)
 {
 	width: 40px;
-	transform: translateX(0px) rotate(-45deg);
+	transform: translateX(0px) rotate(315deg);
 }
 
 
