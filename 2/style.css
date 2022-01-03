@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@700&display=swap');
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Oswald', sans-serif;
+
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #3d3d3d;
+}
+.texte
+{
+    display: flex;
+    transform-style: preserve-3d;
+    gap: 10px;
+    transform: rotateY(30deg) rotateX(10deg);
+}
+.texte .text
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: 2.5s ease-in-out;
+    transition-delay: calc(0.25s * var(--j));
+}
+.texte:hover .text
+{
+    transform: rotateX(360deg);
+}
+.texte:hover .text:last-child
+{
+    transform: rotateX(630deg);
+}
+.texte .text ::before
+{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(87, 87, 87);
+    transform-origin: center;
+    transform: rotateY(90deg) translateX(50px) translateZ(-50px);
+}
+.texte .text:last-child:before
+{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-origin: center;
+    transform: rotateY(90deg) translateZ(-50px);
+   background: #29c040 ;
+}
+.texte .text span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(#434343,#535353);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: #ffffff;
+    transform-style: preserve-3d;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+}
+
+
+.texte .text:last-child span
+{
+    background: linear-gradient(#29c040,#32ed4e);
+    color: #333;
+}
